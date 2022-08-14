@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-from serial_class_jw import SerialManager
+from serial_class_can import SerialManager
 
 app = Flask(__name__)
 
