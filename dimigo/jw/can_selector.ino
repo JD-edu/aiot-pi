@@ -30,6 +30,7 @@ void loop() {
      Srial.write("s\r\n");
      
   }else{
+    
     while(Serial.Available() > 0){
       string cmd = Serial.readStringUntil('\n');
       if (cmd == "can"){
