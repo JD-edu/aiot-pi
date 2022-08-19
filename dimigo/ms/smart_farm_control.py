@@ -40,7 +40,6 @@ except IOError:
     print('COM port open error...')
 
 while True: 
-    print("test-1")
     if seq.isOpen() == True:  
         try:
             if seq.inWaiting():
