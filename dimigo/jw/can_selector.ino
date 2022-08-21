@@ -28,11 +28,7 @@ void loop() {
   {
      motor_stop()
      Srial.write("s\r\n");
-     
-  }else{
-    
-    while(Serial.Available() > 0){
-      string cmd = Serial.readStringUntil('\n');
+     string cmd = Serial.readStringUntil('\n');
       if (cmd == "can"){
         delay(3000);
         sv.write(180); // can
@@ -44,6 +40,9 @@ void loop() {
         delay(3000);
         motor_on()
       }
+  }else{
+     motor_on();
+ ;
     }
   }
 }
